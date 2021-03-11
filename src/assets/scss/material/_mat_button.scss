@@ -23,36 +23,30 @@ a.mat-raised-button {
   // Button colors
   &.mat-primary {
     background-color: $primary-color;
+    border-radius: 18px;
+    padding: 4px 16px;
+    @include font(10px, 16px, normal, $white-color);
+    &.font-14 {
+      font-size: 14px;
+      padding: 6px 16px !important;
+    }
 
     &[disabled] {
       background-color: $grey-color;
     }
   }
-
-  &.mat-accent {
-    background-color: $secondary-color;
-    color: $white-color;
-
-    &[disabled] {
-      background-color: $grey-color;
-    }
-  }
-
   &.mat-warn {
     background-color: $warn-color;
-
+    border-radius: 18px;
+    padding: 4px 16px;
+    @include font(10px, 16px, normal, $white-color);
+    &.font-14 {
+      font-size: 14px;
+      padding: 6px 16px !important;
+    }
     &[disabled] {
       background-color: $grey-color;
     }
-  }
-  &.save-button {
-    background: #224272;
-    border-radius: 18px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 16px;
-    padding: 4px 16px;
   }
 }
 

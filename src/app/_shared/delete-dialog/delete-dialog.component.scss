@@ -1,0 +1,10 @@
+
+@import "../../../assets/scss/settings/colors";
+@import "../../../assets/scss/settings/variables";
+@import "../../../assets/scss/tools/mixins";
+.txt-red {
+    margin-bottom: $spacer6 !important;
+}
+.modal-title {
+    color: $grey-color;
+}

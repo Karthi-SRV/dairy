@@ -58,3 +58,20 @@ p {
 .cursor-not-allowed {
   cursor: not-allowed;
 }
+
+
+/* Responsive section style here */
+@media only screen and (max-width: 40em) {
+  .diary {
+    .dairy-section {
+      width: 100% !important;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .diary {
+    .dairy-section {
+      width: 60% !important;
+    }
+  }
+}

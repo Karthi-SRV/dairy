@@ -1,76 +1,91 @@
+@import "../../../assets/scss/settings/colors";
+@import "../../../assets/scss/settings/variables";
+@import "../../../assets/scss/tools/mixins";
+
 .diary {
-  background: #E5E5E5;
+  background: $bg-color;
   height: calc(100vh - 48px);
-  padding: 24px;
+  padding: $spacer24;
   display: flex;
   align-items: flex-start;
   justify-content: center;
+
   .dairy-section {
     display: flex;
     justify-content: center;
+    width: 28%;
     .daily-box {
-      padding: 16px;
-      width: 395px;
-      background: #FFFFFF;
-      border-radius: 10px;
+      padding: $spacer16;
+      width: auto;
+      background: $white-color;
+      border-radius: $middle-border-radius;
       .header {
         .arrow {
-          color: #3E52BE;
+          color: $primary-color;
         }
       }
     }
+
     .custom-textarea {
       .mat-form-field {
         width: 100%;
       }
     }
+
     .mood {
-      color: #3E52BE;;
+      color: $primary-color;
     }
+
     .history-section {
-      background: #fff;
-      width: 395px;
-      padding: 16px;
-      margin: 6px 0;
-      border-radius: 10px;
+      background: $white-color;
+      width: auto;
+      padding: $spacer16;
+      margin: $spacer6 0;
+      border-radius: $middle-border-radius;
+
       .calender-section {
         background: #F7F8F9;
-        border-radius: 10px;
+        border-radius: $middle-border-radius;
         flex: none;
         order: 0;
         flex-grow: 0;
-        margin: 8px 0px;
+        margin: $spacer8 0;
         padding: 16px;
+
         .icon {
-          margin-right: 3px;
-          color: #3E52BE;
-          font-size: 12px;
-          line-height: 12px;
-          color: #3E52BE;
+          @include font(12px, 12px, normal, $primary-color);
         }
+
         .icon-content {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 12px;
-          color: #3E52BE;
+          @include font(10px, 12px, normal, $primary-color);
         }
+
         .more {
-          font-size: 12px;
-          color: #3E52BE;
+          @include font(12px, 12px, normal, $primary-color);
         }
+
         .desc {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 10px;
-          line-height: 12px;
-          color: #263238;
+          @include font(10px, 12px, normal, $text-grey-hint);
           margin: 0;
         }
       }
+
       .inner-history {
         height: calc(100vh - 367px);
         overflow: auto;
+      }
+    }
+
+    .no-records {
+      height: calc(100vh - 415px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .records-title {
+        @include font(14px, 21px, normal, $primary-color);
+        text-align: center;
+        margin: 6px 0 0 0;
       }
     }
   }

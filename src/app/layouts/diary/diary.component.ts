@@ -63,7 +63,7 @@ export class DiaryComponent implements OnInit {
 
   deleteConfirmation(): void {
     const dialogRef = this.matDialog.open(DeleteDialogComponent, {
-      width: '560px',
+      width: '460px',
       height: 'auto',
       disableClose: true
     });
