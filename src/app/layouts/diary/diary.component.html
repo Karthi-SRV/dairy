@@ -5,16 +5,15 @@
       <span class="material-icons arrow"> arrow_forward </span>
     </div>
     <div>
-      <form class="example-form">
+      <form #form class="example-form" (ngSubmit)="onSubmit()">
         <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Write something"></textarea>
+          <textarea matInput placeholder="Write something" name="message" [(ngModel)]="message" #messageInput rows="5"
+          cols="60"></textarea>
         </mat-form-field>
+          <span class="material-icons arrow" (click)="isEmojiOpen=!isEmojiOpen"> mood </span>
+          <emoji-mart title="Pick your emoji…" emoji="point_up" *ngIf="isEmojiOpen" (emojiSelect)="addEmoji($event)"></emoji-mart>
+          <button mat-raised-button color="primary">Save</button>
       </form>
     </div>
-    <div>
-      <img src="" alt="">
-      <button mat-raised-button color="primary">Primary</button>
-    </div>
   </div>
-
 </div>
