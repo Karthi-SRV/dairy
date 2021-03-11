@@ -5,6 +5,7 @@
 .diary {
   background: $bg-color;
   height: calc(100vh - 48px);
+  overflow: auto;
   padding: $spacer24;
   display: flex;
   align-items: flex-start;
