@@ -1,0 +1,52 @@
+/* ==============================
+   Border Radius Properties
+---------------------------------*/
+
+$border_radius_rounded: 50px;
+$border_radius_circle: 50%;
+
+$global-border-radius: 2px;
+$border_radius: 5px;
+$normal-border-radius: 4px;
+
+/* ==============================
+   Font Size Properties
+---------------------------------*/
+
+$font_size: 14px;
+
+/* ==============================
+   Box Shadow Properties
+---------------------------------*/
+
+$box-shadow: 0 4px 10px 0 rgba($black-color, 0.08);
+$box-shadow-1: 0 0 4px 0 rgba($black-color, 0.08);
+$box-shadow-grey: 0 6px 15px 0 rgba($black-color, 0.4);
+$box-shadow-primary: 0 2px 8px 0 rgba($black-color, 0.05);
+
+/* ==============================
+   Spacers Properties
+---------------------------------*/
+
+$spacer2: 2px;
+$spacer4: 4px;
+$spacer6: 6px;
+$spacer7: 7px;
+$spacer8: 8px;
+$spacer10: 10px;
+$spacer12: 12px;
+$spacer16: 16px;
+$spacer22: 22px;
+$spacer24: 24px;
+$spacer28: 28px;
+$spacer30: 30px;
+$spacer32: 32px;
+$spacer36: 36px;
+$spacer40: 40px;
+$spacer48: 48px;
+$spacer56: 56px;
+
+/* ==============================
+   border Properties
+---------------------------------*/
+$border: 1px solid $black-color-5;

@@ -1,0 +1,31 @@
+.dairy-section {
+  background: #E5E5E5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  .daily-box {
+    padding: 16px;
+    position: relative;
+    width: 395px;
+    height: 207px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .heading {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        color: #3E52BE;
+      }
+      .arrow {
+        color: #3E52BE;
+      }
+    }
+  }
+}
