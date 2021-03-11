@@ -5,6 +5,7 @@ import { DiaryRoutingModule } from './diary-routing.module';
 import { DiaryComponent } from './diary.component';
 import { SharedModule } from 'src/app/_shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
+import { PickerModule } from '@ctrl/ngx-emoji-mart'
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     DiaryRoutingModule,
-    SharedModule
+    SharedModule,
+    PickerModule,
   ]
 })
 export class DiaryModule { }

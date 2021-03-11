@@ -1,6 +1,6 @@
-.body {
+.diary {
   background: #E5E5E5;
-  height: 100vh;
+  height: calc(100vh - 48px);
   padding: 24px;
   display: flex;
   align-items: flex-start;
@@ -67,6 +67,10 @@
           color: #263238;
           margin: 0;
         }
+      }
+      .inner-history {
+        height: calc(100vh - 367px);
+        overflow: auto;
       }
     }
   }

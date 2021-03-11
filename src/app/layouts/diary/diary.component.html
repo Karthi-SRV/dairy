@@ -1,42 +1,56 @@
-<div class="body">
+<div class="diary">
   <div class="dairy-section flex-column">
     <div class="daily-box">
       <div class="header d-flex justify-content-between">
         <p class="heading">Your Diary</p>
-        <span class="material-icons arrow"> arrow_forward </span>
+        <span class="material-icons arrow cursor"> arrow_forward </span>
       </div>
-      <div>
-        <form class="custom-textarea ">
+      <form class="custom-textarea" #diaryForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
           <mat-form-field class="full-width textarea" floatLabel="never">
-            <textarea matInput placeholder="Textarea"></textarea>
+            <textarea matInput placeholder="Write something" name="message" [(ngModel)]="message" #messageInput rows="5"
+              cols="60"></textarea>
           </mat-form-field>
-        </form>
-      </div>
-      <div class="d-flex align-items-center justify-content-between">
-        <span class="material-icons mood">
-          mood
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="material-icons mood cursor" (click)="isEmojiOpen=!isEmojiOpen">
+            mood
           </span>
-        <button mat-raised-button color="primary" class="save-button">Save</button>
-      </div>
+          <button mat-raised-button color="primary" class="save-button">Save</button>
+        </div>
+        <emoji-mart title="Pick your emoji…" emoji="point_up" *ngIf="isEmojiOpen" (emojiSelect)="addEmoji($event)">
+        </emoji-mart>
+      </form>
     </div>
     <div class="history-section">
       <div class="header d-flex justify-content-between align-items-center">
         <p class="heading">History</p>
-        <button mat-button color="primary" class="clear d-flex align-items-center justify-content-center"><span class="material-icons"> delete_sweep </span></button>
+        <button mat-button color="primary" class="clear d-flex align-items-center justify-content-center"
+          (click)="clearAllData()" *ngIf="history.length != 0;"><span class="material-icons"> delete_sweep </span></button>
       </div>
-      <div class="calender-section">
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-            <span class="material-icons icon"> today </span>
-            <p class="icon-content">10:00 AM | Oct 22, 2020</p>
+      <div class="inner-history">
+        <div *ngIf="history.length > 0; else noHistory">
+          <div class="calender-section" *ngFor="let data of history">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <span class="material-icons icon"> today </span>
+                <p class="icon-content">{{data.time}} | {{data.date}}</p>
+              </div>
+              <span class="material-icons more"> more_vert </span>
+            </div>
+            <div>
+              <p class="desc">{{data.message}}</p>
+            </div>
           </div>
-          <span class="material-icons more"> more_vert </span>
         </div>
-        <div>
-          <p class="desc">I need to add smile from the library ☺️☺️☺️</p>
-        </div>
+        <ng-template #noHistory>
+          <div class="calender-section no-records">
+            <div>
+              <p class="desc">No records</p>
+            </div>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>
-  
 </div>
