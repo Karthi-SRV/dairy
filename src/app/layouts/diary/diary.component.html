@@ -9,14 +9,16 @@
         <div>
           <mat-form-field class="full-width textarea" floatLabel="never">
             <textarea matInput placeholder="Write something" name="message" [(ngModel)]="message" #messageInput rows="5"
-              cols="60"></textarea>
+              cols="60" required #messageRef="ngModel" (blur)="message=message.trim()"></textarea>
+            <mat-error *ngIf="messageRef.hasError('required') && messageRef.touched">
+            </mat-error>
           </mat-form-field>
         </div>
         <div class="d-flex align-items-center justify-content-between">
           <span class="material-icons mood cursor" (click)="isEmojiOpen=!isEmojiOpen">
             mood
           </span>
-          <button mat-raised-button color="primary" class="save-button">Save</button>
+          <button mat-raised-button color="primary" class="save-button" [disabled]="!diaryForm.valid">Save</button>
         </div>
         <emoji-mart title="Pick your emoji…" emoji="point_up" *ngIf="isEmojiOpen" (emojiSelect)="addEmoji($event)">
         </emoji-mart>
@@ -26,7 +28,7 @@
       <div class="header d-flex justify-content-between align-items-center">
         <p class="heading">History</p>
         <button mat-button color="primary" class="clear d-flex align-items-center justify-content-center"
-          (click)="clearAllData()" *ngIf="history.length != 0;"><span class="material-icons"> delete_sweep </span></button>
+          (click)="deleteConfirmation()" *ngIf="history.length != 0;"><span class="material-icons"> delete_sweep </span></button>
       </div>
       <div class="inner-history">
         <div *ngIf="history.length > 0; else noHistory">
