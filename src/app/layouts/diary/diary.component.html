@@ -1,38 +1,57 @@
-<div class="diary">
+<div class="container-layout">
   <div class="dairy-section flex-column">
-    <div class="daily-box">
+    <div class="daily-form">
       <div class="header d-flex justify-content-between">
         <p class="heading">Your Diary</p>
         <span class="material-icons arrow cursor"> arrow_forward </span>
       </div>
-      <form class="custom-textarea" #diaryForm="ngForm" (ngSubmit)="onSubmit()">
+      <form class="form" #diaryForm="ngForm" (ngSubmit)="addMessage()">
         <div>
           <mat-form-field class="full-width textarea" floatLabel="never">
-            <textarea matInput placeholder="Write something" name="message" [(ngModel)]="message" #messageInput rows="5"
-              cols="60" required #messageRef="ngModel" (blur)="message=message.trim()"></textarea>
-            <mat-error *ngIf="messageRef.hasError('required') && messageRef.touched">
+            <textarea
+             matInput
+             placeholder="Write something"
+             name="message"
+             [(ngModel)]="message"
+             #messageInput
+             required
+             #messageRef="ngModel"
+            >
+            </textarea>
+            <mat-error
+             *ngIf="messageRef.hasError('required') && messageRef.touched">
             </mat-error>
           </mat-form-field>
         </div>
         <div class="d-flex align-items-center justify-content-between">
-          <span class="material-icons mood cursor" (click)="isEmojiOpen=!isEmojiOpen">
+          <span class="material-icons mood cursor" (click)="openEmoji=!openEmoji">
             mood
           </span>
-          <button mat-raised-button color="primary" class="save-button" [disabled]="!diaryForm.valid">Save</button>
+          <button
+           mat-raised-button
+           color="primary"
+           class="save-button"
+           [disabled]="!diaryForm.valid"
+          >
+            Save
+          </button>
         </div>
-        <emoji-mart title="Pick your emoji…" emoji="point_up" *ngIf="isEmojiOpen" (emojiSelect)="addEmoji($event)">
+        <emoji-mart
+         title="Pick your emoji…"
+         emoji="point_up"
+         *ngIf="openEmoji"
+         (emojiSelect)="addEmoji($event)"
+        >
         </emoji-mart>
       </form>
     </div>
     <div class="history-section">
       <div class="header d-flex justify-content-between align-items-center">
         <p class="heading">History</p>
-        <button mat-button color="primary" class="clear d-flex align-items-center justify-content-center"
-          (click)="deleteConfirmation()" *ngIf="history.length != 0;"><span class="material-icons"> delete_sweep </span></button>
       </div>
       <div class="inner-history">
-        <div *ngIf="history.length > 0; else noHistory">
-          <div class="calender-section" *ngFor="let data of history">
+        <div *ngIf="history.length > 0;">
+          <div class="history-content" *ngFor="let data of history">
             <div class="d-flex align-items-center justify-content-between">
               <div class="d-flex align-items-center">
                 <span class="material-icons icon"> today </span>
@@ -45,13 +64,11 @@
             </div>
           </div>
         </div>
-        <ng-template #noHistory>
-          <div class="calender-section no-records">
-            <div>
+        <div *ngIf="history.length == 0;">
+          <div class="history-content no-records">
               <p class="desc">No records</p>
-            </div>
           </div>
-        </ng-template>
+        </div>
       </div>
     </div>
   </div>

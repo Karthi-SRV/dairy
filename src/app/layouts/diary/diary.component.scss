@@ -1,4 +1,4 @@
-.diary {
+.container-layout {
   background: #E5E5E5;
   height: calc(100vh - 48px);
   padding: 24px;
@@ -8,7 +8,7 @@
   .dairy-section {
     display: flex;
     justify-content: center;
-    .daily-box {
+    .daily-form {
       padding: 16px;
       width: 395px;
       background: #FFFFFF;
@@ -19,7 +19,7 @@
         }
       }
     }
-    .custom-textarea {
+    .form {
       .mat-form-field {
         width: 100%;
       }
@@ -33,7 +33,7 @@
       padding: 16px;
       margin: 6px 0;
       border-radius: 10px;
-      .calender-section {
+      .history-content {
         background: #F7F8F9;
         border-radius: 10px;
         flex: none;

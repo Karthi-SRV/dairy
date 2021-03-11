@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { MaterialModule } from './material.module';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 const MODULES: any[] = [
     FormsModule,
     CommonModule,
-    MaterialModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
 ];
 
 export const SHARED_MODULES_WITH_PROVIDERS: any[] = [];
