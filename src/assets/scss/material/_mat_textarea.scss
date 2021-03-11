@@ -1,0 +1,40 @@
+@import "../settings/variables";
+
+
+/* Mat form field Textarea style overwrite here */
+
+mat-form-field.mat-form-field-type-mat-input.textarea {
+
+  .mat-form-field-infix {
+    padding: 0;
+    .mat-form-field-label {
+      top: 28px !important;
+      left: 17px !important;
+    }
+    textarea {
+      box-shadow: none;
+      min-height: 95px;
+      font-size: 14px;
+      line-height: 1.4;
+      padding: 16px;
+      background: #FFFFFF;
+      border: 1px solid #F7F8F9;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: $secondary-color;
+      .mat-form-field-label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #90A4AE;
+      }
+      &:focus {
+        border: 1px solid #d7d7d7;
+      }
+    }
+  }
+  .mat-form-field-underline {
+    display: none;
+  }
+}

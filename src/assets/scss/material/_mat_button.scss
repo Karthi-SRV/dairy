@@ -2,4 +2,57 @@
 @import "../settings/variables";
 @import "../tools/mixins";
 
-/* Material Button style overwrite here */
+
+button.mat-raised-button,
+a.mat-raised-button {
+  background-color: $primary-color;
+  color: $white-color;
+  transition: all .3s;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &:hover {
+    .mat-button-focus-overlay,
+    .mat-button-ripple {
+      opacity: 0 !important;
+    }
+  }
+
+  // Button colors
+  &.mat-primary {
+    background-color: $primary-color;
+
+    &[disabled] {
+      background-color: $grey-color;
+    }
+  }
+
+  &.mat-accent {
+    background-color: $secondary-color;
+    color: $white-color;
+
+    &[disabled] {
+      background-color: $grey-color;
+    }
+  }
+
+  &.mat-warn {
+    background-color: $warn-color;
+
+    &[disabled] {
+      background-color: $grey-color;
+    }
+  }
+  &.save-button {
+    background: #224272;
+    border-radius: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 16px;
+    padding: 4px 16px;
+  }
+}
+

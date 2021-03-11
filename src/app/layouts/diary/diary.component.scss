@@ -1,30 +1,72 @@
-.dairy-section {
+.body {
   background: #E5E5E5;
   height: 100vh;
+  padding: 24px;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  .daily-box {
-    padding: 16px;
-    position: relative;
-    width: 395px;
-    height: 207px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      .heading {
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        text-transform: capitalize;
-        color: #3E52BE;
+  .dairy-section {
+    display: flex;
+    justify-content: center;
+    .daily-box {
+      padding: 16px;
+      width: 395px;
+      background: #FFFFFF;
+      border-radius: 10px;
+      .header {
+        .arrow {
+          color: #3E52BE;
+        }
       }
-      .arrow {
-        color: #3E52BE;
+    }
+    .custom-textarea {
+      .mat-form-field {
+        width: 100%;
+      }
+    }
+    .mood {
+      color: #3E52BE;;
+    }
+    .history-section {
+      background: #fff;
+      width: 395px;
+      padding: 16px;
+      margin: 6px 0;
+      border-radius: 10px;
+      .calender-section {
+        background: #F7F8F9;
+        border-radius: 10px;
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        margin: 8px 0px;
+        padding: 16px;
+        .icon {
+          margin-right: 3px;
+          color: #3E52BE;
+          font-size: 12px;
+          line-height: 12px;
+          color: #3E52BE;
+        }
+        .icon-content {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 12px;
+          color: #3E52BE;
+        }
+        .more {
+          font-size: 12px;
+          color: #3E52BE;
+        }
+        .desc {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 10px;
+          line-height: 12px;
+          color: #263238;
+          margin: 0;
+        }
       }
     }
   }

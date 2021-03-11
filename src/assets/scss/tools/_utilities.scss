@@ -13,3 +13,48 @@ body {
   font-family: 'Nunito Sans';
   font-size: $font_size;
 }
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Flex basis styles here */
+.flex-1 {
+  flex: 1;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.d-flex {
+  display: flex !important; 
+}
+.align-items-center {
+  display: flex !important; 
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+
+
+p {
+  &.heading {
+    @include font(14px, 23px, 500, $primary-color);
+    text-transform: capitalize;
+  }
+}
+
+/* Cursor styles here */
+.cursor {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}

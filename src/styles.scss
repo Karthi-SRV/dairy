@@ -3,3 +3,24 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* ==========================================================================
+   Settings
+    - Global variables, config switches, brand colors, etc
+   ========================================================================== */
+   @import "assets/scss/settings/colors";
+   @import "assets/scss/settings/variables";
+
+   /* ==========================================================================
+   Calibraint Angular Material Theme
+   ========================================================================== */
+    @import "assets/scss/material/mat_button";
+    @import "assets/scss/material/mat_input";
+    @import "assets/scss/material/mat_textarea";
+
+/* ==========================================================================
+   Tools
+    - Globally-available tools, public mixins, helper functions
+   ========================================================================== */
+   @import "assets/scss/tools/mixins";
+   @import "assets/scss/tools/utilities";

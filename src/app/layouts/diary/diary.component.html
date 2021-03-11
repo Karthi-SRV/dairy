@@ -1,20 +1,42 @@
-<div class="dairy-section">
-  <div class="daily-box">
-    <div class="header">
-      <p class="heading">Your Diary</p>
-      <span class="material-icons arrow"> arrow_forward </span>
+<div class="body">
+  <div class="dairy-section flex-column">
+    <div class="daily-box">
+      <div class="header d-flex justify-content-between">
+        <p class="heading">Your Diary</p>
+        <span class="material-icons arrow"> arrow_forward </span>
+      </div>
+      <div>
+        <form class="custom-textarea ">
+          <mat-form-field class="full-width textarea" floatLabel="never">
+            <textarea matInput placeholder="Textarea"></textarea>
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="d-flex align-items-center justify-content-between">
+        <span class="material-icons mood">
+          mood
+          </span>
+        <button mat-raised-button color="primary" class="save-button">Save</button>
+      </div>
     </div>
-    <div>
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Write something"></textarea>
-        </mat-form-field>
-      </form>
-    </div>
-    <div>
-      <img src="" alt="">
-      <button mat-raised-button color="primary">Primary</button>
+    <div class="history-section">
+      <div class="header d-flex justify-content-between align-items-center">
+        <p class="heading">History</p>
+        <button mat-button color="primary" class="clear d-flex align-items-center justify-content-center"><span class="material-icons"> delete_sweep </span></button>
+      </div>
+      <div class="calender-section">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center">
+            <span class="material-icons icon"> today </span>
+            <p class="icon-content">10:00 AM | Oct 22, 2020</p>
+          </div>
+          <span class="material-icons more"> more_vert </span>
+        </div>
+        <div>
+          <p class="desc">I need to add smile from the library ☺️☺️☺️</p>
+        </div>
+      </div>
     </div>
   </div>
-
+  
 </div>
